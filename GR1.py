@@ -198,7 +198,7 @@ Trả lời chi tiết:"""
         answer = self.rag_chain.invoke(question)
         
         # Lấy source documents
-        source_docs = self.retriever.get_relevant_documents(question)
+        source_docs = self.retriever.invoke(question)
         
         return {
             "result": answer,
